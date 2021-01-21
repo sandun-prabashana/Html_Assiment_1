@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link href="normalize.css" rel="stylesheet">
+    <style>
+        #circle{
+            width: 350px;
+            height: 350px;
+            border-radius: 100%;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+
+
+        }
+        #child{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 100%;
+            border: 20px solid gray;
+            border-top: 20px solid red;
+            animation: rotate 2s infinite;
+        }
+        #line{
+            width: 50%;
+            height: 20px;
+            position: absolute;
+            margin: auto;;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: red;
+            transform: rotate(-43deg);
+            transform-origin: left;
+            animation: rotateline 2s infinite;
+        }
+        #circle1{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 100px;
+            background-color: red;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+        @keyframes rotate {
+            from{transform: rotate(43deg)}
+            to{transform: rotate(403deg)}
+        }
+        @keyframes rotateline {
+            from{transform: rotate(0deg)}
+            to{transform: rotate(360deg)}
+        }
+    </style>
+</head>
+<body>
+<section id="circle">
+    <article id="child"></article>
+    <div id="line">
+        <h1 id="circle1"></h1>
+    </div>
+</section>
+</body>
+</html>
