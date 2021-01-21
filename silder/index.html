@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link href="normalize.css" rel="stylesheet">
+    <style>
+       #box{
+           width: 100vw;
+           height: 100vh;
+           position: absolute;
+           overflow: hidden;
+       }
+       #box2{
+           width: 400%;
+           height: 100%;
+           display: flex;
+           animation: slide 10s infinite alternate;
+       }
+       section>div{
+           width: 100%;
+           height: 100%;
+       }
+
+       @keyframes slide {
+           0%{
+               transform: translateX(-0%);
+           }
+           25%{
+               transform: translateX(-25%);
+           }
+           50%{
+               transform: translateX(-50%);
+           }
+           75%{
+           transform: translateX(-75%);
+       }
+       100%{
+       }
+       }
+       section>div:nth-child(1){
+           background: url("asset/1.jpg");
+           background-size: cover;
+           background-position: center;
+       }
+       section>div:nth-child(2){
+           background: url("asset/2.jpg");
+           background-size: cover;
+           background-position: center;
+       }
+       section>div:nth-child(3){
+           background: url("asset/3.jpg");
+           background-size: cover;
+           background-position: center;
+       }
+       section>div:nth-child(4){
+           background: url("asset/welocom.jpg");
+           background-size: cover;
+           background-position: center;
+       }
+    </style>
+</head>
+<body>
+<section id="box">
+    <section id="box2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</section>
+</body>
+</html>
