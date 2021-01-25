@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Animation</title>
+    <style type="text/css">
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            position: relative;
+            background: #000 url("city.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-position: 0 0;
+            background-repeat: repeat-x;
+            animation:animate 10s linear infinite;
+        }
+        .car{
+            position: absolute;
+            bottom: -60px;
+            left: 10px;
+        }
+        @keyframes animate {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: 100% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <img class="car" src="car.png">
+</div>
+</body>
+</html>
